@@ -8,9 +8,9 @@ yandex-speechkit
 requests
 SpeechRecognition
 Pillow
-easyocr
-torch
+pytesseract
 torchvision
 torchaudio
 numpy
 ffmpeg-python
+
