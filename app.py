@@ -56,19 +56,13 @@ class MediaProcessor:
     
     @staticmethod
     def extract_text_from_image(image_path: str) -> str:
-        """Извлекает текст с изображения с помощью EasyOCR"""
         try:
-            if reader is None:
-                return "Ошибка: OCR не инициализирован"
-                
-            logger.info("Начало распознавания текста с изображения")
-            
-            # Распознаем текст
-            results = reader.readtext(image_path)
-            
-            if not results:
+            text = pytesseract.image_to_string(Image.open(image_path), lang='rus+eng')
+            if not text.strip():
                 return "Текст на изображении не обнаружен"
-            
+            return text
+        except Exception as e:
+            return f"Ошибка при распознавании текста: {e}"
             # Объединяем все распознанные тексты
             text = '\n'.join([result[1] for result in results])
             logger.info(f"Распознанный текст: {text[:100]}...")
@@ -661,4 +655,5 @@ def main():
         raise
 
 if __name__ == "__main__":
+
     main()
