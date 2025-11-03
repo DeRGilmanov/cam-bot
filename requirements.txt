@@ -6,3 +6,4 @@ openai==1.3.0  # оставляем как резервный вариант
 pyTelegramBotAPI==4.*   # telebot
 yandex-speechkit
 requests
+SpeechRecognition
