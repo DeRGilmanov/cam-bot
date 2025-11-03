@@ -7,3 +7,10 @@ pyTelegramBotAPI==4.*   # telebot
 yandex-speechkit
 requests
 SpeechRecognition
+Pillow
+easyocr
+torch
+torchvision
+torchaudio
+numpy
+ffmpeg-python
