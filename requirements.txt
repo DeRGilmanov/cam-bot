@@ -12,5 +12,6 @@ pytesseract
 torchvision
 torchaudio
 numpy
-ffmpeg-python
+
+
 
